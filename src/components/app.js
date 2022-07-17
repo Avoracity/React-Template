@@ -1,12 +1,18 @@
 import { useState } from "react";
 import React from "react";
 
+import data from "./testData.json";
+
+console.log(data);
+
+
 export default function App() {
   const [count, setCount] = useState(0);
   return (
     <div>
       This is a sample stateful and server-side
       rendered React application.
+
       <br />
       <br />
       Here is a button that will track
