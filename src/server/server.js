@@ -2,8 +2,15 @@ import express from "express";
 import ReactDOMServer from "react-dom/server";
 import React from "react";
 import App from "../components/app";
+import sassMiddleware from "node-sass-middleware";
 
-
+  server.use(sassMiddleware({
+    src: path.join(__dirname, "sass"),
+    dest: path.join(__dirname, "public"),
+    debug: true,
+    outputStyle: "compressed",
+    prefix: "/public/assets/styles"
+  }));
 
   const server = express();
   server.use(express.static("dist"));
